@@ -1,0 +1,12 @@
+# python packages needed
+openai
+langchain
+streamlit
+chainlit
+pypdf3
+python-dotenv
+faiss-cpu
+huggingface_hub
+
+
+
