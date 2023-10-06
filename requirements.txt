@@ -7,6 +7,9 @@ pypdf3
 python-dotenv
 faiss-cpu
 huggingface_hub
+black
+psycopg2
+
 
 
 

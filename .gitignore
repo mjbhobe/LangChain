@@ -162,3 +162,8 @@ cython_debug/
 
 # Visual studio code hidden files
 .vscode/
+
+# config files
+*.config
+*.ini
+
