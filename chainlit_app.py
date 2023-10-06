@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-chainlit_app.py: basic chainlit application
+chainlit_app.py: basic chainlit application with TII Falcon 7 Bn model on Hugging Face
 to run: $> chainlit run chainlit_app.py -w
 """
 
@@ -39,6 +39,7 @@ def main():
 
 @cl.on_message
 async def main(message: str):
+    """will be called every time a user submits a prompt on chat window"""
     # add your custom logic here..
     llm_chain = cl.user_session.get("llm_chain")
     # call chain asynchronously
