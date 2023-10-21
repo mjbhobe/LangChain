@@ -5,8 +5,6 @@
 # pre-requisits:
 # Install streamlit using: pip install streamlit
 # run this file (in the file's folder) using: streamlit run restaurants.py
-import os
-import pathlib
 from dotenv import load_dotenv
 from langchain.llms import OpenAI
 from langchain.prompts import PromptTemplate
@@ -67,27 +65,15 @@ def get_restaurant_name_and_items(cuisine: str):
 
 def main():
     # load environment variables from .env - this seems to create a problem with Streamlit reload
-    # load_dotenv()
-    # print(os.environ["OPENAI_API_KEY"])
-
-    # setup the OpenAI API Key (read from file)
-    # OPEN_API_KEY_FILE =  r"c:\dev\OpenAIKey.txt"
-    OPEN_API_KEY_FILE = pathlib.Path(__file__).parent / ".env"
-    if not os.path.exists(OPEN_API_KEY_FILE):
-        raise FileNotFoundError(f"OpenAI API key file not found at {OPEN_API_KEY_FILE}")
-
-    OPENAI_API_KEY = None
-    with open(OPEN_API_KEY_FILE, "r") as f:
-        # OPEN_API_KEY = f.read().strip()
-        OPENAI_API_KEY = f.read().strip().split("=")[1].strip()  # grab second token
-        # print(f"OPENAI_API_KEY = {OPENAI_API_KEY}")
-    os.environ["OPENAI_API_KEY"] = OPENAI_API_KEY
+    load_dotenv()
 
     # setup our interface with Streamlit
     st.title("Restaurant name &amp; menu generator")
 
     # create a side-bar to select a cuisine from the following
+    SELECT_CUISINE = "<Select Cuisine>"
     cuisines = (
+        SELECT_CUISINE,
         "American",
         "Mexican",
         "Indian",
@@ -104,7 +90,7 @@ def main():
     # cuisine = "Arabic"
 
     # following runs only if user selects any item
-    if cuisine:
+    if cuisine and (cuisine != SELECT_CUISINE):
         response = get_restaurant_name_and_items(cuisine)
         # print(response)
         # display the results
