@@ -9,6 +9,10 @@ faiss-cpu
 huggingface_hub
 black
 psycopg2
+tiktoken
+# for GUI in notebooks
+panel
+jupyter-bokeh
 
 
 
