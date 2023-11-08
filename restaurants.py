@@ -38,7 +38,8 @@ def get_restaurant_name_and_items(cuisine: str):
         input_variables=["restaurant_name"],
         # this is your prompt - same as above except the cuisine is parameterised with {}
         # similar to a Python f-string
-        template="Please suggest 10-15 menu items for {restaurant_name}. Return as comma separated list",
+        template="""Please suggest 10-15 menu items for {restaurant_name} with fictitious prices. \
+                 Return as comma separated list of tuples enclosed in [], example [(menu_item1, price1), (menu_item2, price2),...]""",
     )
 
     # chain is the same as before
@@ -48,8 +49,6 @@ def get_restaurant_name_and_items(cuisine: str):
         # here we add an output_key parameter to capture the output from this prompt
         output_key="menu_items",
     )
-
-    from langchain.chains import SequentialChain
 
     seq_chain = SequentialChain(
         chains=[name_chain, menu_chain],  # NOTE: sequence matters here!!
@@ -66,6 +65,15 @@ def get_restaurant_name_and_items(cuisine: str):
 def main():
     # load environment variables from .env - this seems to create a problem with Streamlit reload
     load_dotenv()
+    # response = get_restaurant_name_and_items("Indian")
+    # print(response)
+    # print(f"\n\n {'-'*25}")
+    # print(f"Welcome to {response['restaurant_name'].strip()}")
+    # print("Please select from our delicious menu")
+    # menu_items_and_prices = response["menu_items"].strip()
+    # print(menu_items_and_prices, type(menu_items_and_prices))
+    # for no, item in enumerate(menu_items_and_prices.split("\n")):
+    #     print(f"{no:2d} {item[0]}  {item[1]}")
 
     # setup our interface with Streamlit
     st.title("Restaurant name &amp; menu generator")
@@ -96,9 +104,8 @@ def main():
         # display the results
         st.header(f"Welcome to _{response['restaurant_name'].strip()}_")
         st.text("We are happy to serve you. Please pick your items from menu:")
-        for item in response["menu_items"].strip().split(","):
-            st.markdown(f"* {item}")
-
+        for item_and_price in eval(response["menu_items"].strip()):
+            st.markdown(f"* {item_and_price[0]}&nbsp;&nbsp;({item_and_price[1]})")
 
 if __name__ == "__main__":
     main()
