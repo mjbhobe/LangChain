@@ -13,6 +13,15 @@ tiktoken
 # for GUI in notebooks
 panel
 jupyter-bokeh
+# for local llama
+sentence-transformers
+uvicorn
+ctransformers
+python-box
+# for accessing Google Gemini
+google-generativeai
+langchain-google-genai
+
 
 
 
