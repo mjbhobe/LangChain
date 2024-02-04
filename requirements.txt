@@ -10,6 +10,7 @@ huggingface_hub
 black
 psycopg2
 tiktoken
+chromadb
 # for GUI in notebooks
 panel
 jupyter-bokeh
