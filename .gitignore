@@ -170,3 +170,7 @@ cython_debug/
 # Model binaries
 *.bin
 
+# FAISS indexes
+*.faiss 
+*.pkl
+

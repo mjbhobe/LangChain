@@ -3,7 +3,7 @@ openai
 langchain
 streamlit
 chainlit
-pypdf3
+pypdf2
 python-dotenv
 faiss-cpu
 huggingface_hub
