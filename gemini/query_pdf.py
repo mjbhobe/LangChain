@@ -55,12 +55,11 @@ def get_vector_store(text_chunks):
 
 def get_conversational_chain(temperature=0.3):
     prompt_template = """
-    Answer the question as detailed as possible from the provided context, make sure to provide
-    all the details. If the answer is not in the provided context, just respond with "I am sorry,
-    I am unable to respond to this question. Answer is not available in my data store". Do not
-    provide an incorrect answer.
-    Context: \n{context}?\n
-    Question: \n{question}\n 
+    Answer the question as detailed as possible from the provided context, make sure to provide all the details, 
+    if the answer is not in provided context just say, "answer is not available in the context", don't provide 
+    the wrong answer\n\n
+    Context:\n {context}?\n
+    Question: \n{question}\n
 
     Answer:
     """
