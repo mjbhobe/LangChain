@@ -1,3 +1,5 @@
+""" hello_gemini.py: Hello Google Gemini"""
+
 import pathlib
 import textwrap
 import os
@@ -35,10 +37,14 @@ def main():
         prompt_text = input("Enter your question: ")
         if prompt_text.lower() == "quit":
             break
-        response = llm.generate_content(prompt_text)
-        print("-" * 80)
-        print(response.text)
-        print("-" * 80)
+        try:
+            response = llm.generate_content(prompt_text)
+            print("\n")
+            print(response.text)
+            print("-" * 80)
+        except ValueError as err:
+            print(f"Error: {err}")
+            print(f"{response.prompt_feedback}")
 
 
 if __name__ == "__main__":
