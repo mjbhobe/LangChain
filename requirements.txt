@@ -11,6 +11,7 @@ black
 psycopg2
 tiktoken
 chromadb
+beautifulsoup4
 # for GUI in notebooks
 panel
 jupyter-bokeh
@@ -22,6 +23,8 @@ python-box
 # for accessing Google Gemini
 google-generativeai
 langchain-google-genai
+# for Anthropic Claude
+langchain-anthropic
 
 
 
