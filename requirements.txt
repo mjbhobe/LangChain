@@ -1,6 +1,6 @@
 # python packages needed
 openai
-langchain
+langchain-openai
 streamlit
 chainlit
 pypdf2
