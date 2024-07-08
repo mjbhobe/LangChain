@@ -1,6 +1,14 @@
 # python packages needed
 openai
+langchain
 langchain-openai
+langchain_community
+# for accessing Google Gemini
+google-generativeai
+langchain-google-genai
+# for Anthropic Claude
+langchain-anthropic
+
 streamlit
 chainlit
 pypdf2
@@ -20,11 +28,6 @@ sentence-transformers
 uvicorn
 ctransformers
 python-box
-# for accessing Google Gemini
-google-generativeai
-langchain-google-genai
-# for Anthropic Claude
-langchain-anthropic
 
 
 

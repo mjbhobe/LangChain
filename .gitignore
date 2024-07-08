@@ -128,6 +128,8 @@ myenv/
 ENV/
 env.bak/
 venv.bak/
+# Gen AI vector store
+vecstore/
 
 # Spyder project settings
 .spyderproject
