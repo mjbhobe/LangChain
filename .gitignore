@@ -128,6 +128,11 @@ myenv/
 ENV/
 env.bak/
 venv.bak/
+
+# dataset (images) folders
+**/train/
+**/test/
+**/val/
 # Gen AI vector store
 vecstore/
 
