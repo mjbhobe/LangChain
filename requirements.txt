@@ -1,6 +1,7 @@
 # python packages needed
 openai
 langchain
+# for OpenAI
 langchain-openai
 langchain_community
 # for accessing Google Gemini
@@ -20,6 +21,10 @@ psycopg2
 tiktoken
 chromadb
 beautifulsoup4
+yfinance
+fastapi[standard]
+uvicorn
+
 # for GUI in notebooks
 panel
 jupyter-bokeh
