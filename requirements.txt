@@ -1,11 +1,15 @@
 # python packages needed
 openai
+anthropic
+google-generativeai
+
 langchain
+langchain_community
+llama-index
+
 # for OpenAI
 langchain-openai
-langchain_community
 # for accessing Google Gemini
-google-generativeai
 langchain-google-genai
 # for Anthropic Claude
 langchain-anthropic
