@@ -4,6 +4,8 @@ anthropic
 google-generativeai
 
 langchain
+# for OpenAI
+langchain-openai
 langchain_community
 llama-index
 
@@ -36,7 +38,8 @@ jupyter-bokeh
 sentence-transformers
 ctransformers
 python-box
-
+fastapi[standard]
+uvicorn
 
 
 
