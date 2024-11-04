@@ -34,7 +34,6 @@ panel
 jupyter-bokeh
 # for local llama
 sentence-transformers
-uvicorn
 ctransformers
 python-box
 
