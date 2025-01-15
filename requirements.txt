@@ -4,9 +4,7 @@ anthropic
 google-generativeai
 
 langchain
-# for OpenAI
-langchain-openai
-langchain_community
+langchain-community
 llama-index
 
 # for OpenAI
@@ -17,7 +15,7 @@ langchain-google-genai
 langchain-anthropic
 
 streamlit
-chainlit
+#chainlit
 pypdf2
 python-dotenv
 faiss-cpu
@@ -25,21 +23,20 @@ huggingface_hub
 black
 psycopg2
 tiktoken
-chromadb
+# chromadb
 beautifulsoup4
 yfinance
-fastapi[standard]
 uvicorn
 
 # for GUI in notebooks
-panel
-jupyter-bokeh
-# for local llama
-sentence-transformers
-ctransformers
-python-box
-fastapi[standard]
-uvicorn
+# panel
+# jupyter-bokeh
+# # for local llama
+# sentence-transformers
+# ctransformers
+# python-box
+# fastapi[standard]
+# uvicorn
 
 
 
