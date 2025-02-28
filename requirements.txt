@@ -13,6 +13,8 @@ langchain-openai
 langchain-google-genai
 # for Anthropic Claude
 langchain-anthropic
+# for Groq
+langchain-groq
 
 streamlit
 #chainlit
