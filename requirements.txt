@@ -3,6 +3,7 @@ openai
 anthropic
 google-generativeai
 
+# langchain common modules
 langchain
 langchain-community
 llama-index
@@ -17,7 +18,6 @@ langchain-anthropic
 langchain-groq
 
 streamlit
-#chainlit
 pypdf2
 python-dotenv
 faiss-cpu
@@ -29,6 +29,7 @@ tiktoken
 beautifulsoup4
 yfinance
 uvicorn
+rich
 
 # for GUI in notebooks
 # panel
