@@ -6,6 +6,9 @@ from rich.markdown import Markdown
 from langchain_core.prompts import PromptTemplate
 from langchain_google_genai import ChatGoogleGenerativeAI
 
+# my local packages
+from third_party.linkedin import scrape_linkedin_profile
+
 load_dotenv()
 
 if __name__ == "__main__":
@@ -14,7 +17,7 @@ if __name__ == "__main__":
     console.print("[green]Hello Langchain![/green]")
 
     summary_template = """
-        given the following information about a person, I want
+        Given the following information about a person, I want
         you to create the following:
             1. A short summary
             2. Two interesting facts about them
@@ -51,5 +54,8 @@ if __name__ == "__main__":
     """
     console.print("[blue]Asking Gemini...[/blue]")
     chain = summary_prompt_template | llm
-    response = chain.invoke(input={"information": information})
+    # instead of information above, we'll used LinkedIn profile
+    gist_url = "https://gist.githubusercontent.com/emarco177/859ec7d786b45d8e3e3f688c6c9139d8/raw/5eaf8e46dc29a98612c8fe0c774123a7a2ac4575/eden-marco-scrapin.json"
+    linkedin_profile = scrape_linkedin_profile(gist_url)
+    response = chain.invoke(input={"information": linkedin_profile})
     console.print(Markdown(response.content))
