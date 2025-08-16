@@ -18,7 +18,7 @@ def lookup(name: str) -> str:
 
     Returns:
         profile URL (str)
-        e.g. for user Manish Bhobe, it should return
+        e.g. for user Manish Bhobé, it should return
         URL https://www.linkedin.com/in/manish-bhobe-b57a6a2/
     """
     # begin with hard coded URL

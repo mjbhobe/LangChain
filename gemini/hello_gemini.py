@@ -2,7 +2,7 @@
 hello_gemini.py: Hello Google Gemini
 This script demonstrates how to use the Google Gemini model as a chatbot
 
-@author: Manish Bhobe
+@author: Manish Bhobé
 My experiments with Python, ML, Gen AI, and more
 Code shared for educational purposes only. Use at your own risk!!
 """
